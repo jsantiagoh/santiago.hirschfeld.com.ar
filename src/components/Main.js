@@ -9,10 +9,10 @@ import Content from './Content'
 const AppComponent = () => (
   <div>
     <NavigationBar title='Horizon MCP'/>
-      <div id="wrapper">
-        <SideBar />
-        <Content />
-      </div>
+    <div id="wrapper">
+      <SideBar />
+      <Content />
+    </div>
   </div>
 )
 
