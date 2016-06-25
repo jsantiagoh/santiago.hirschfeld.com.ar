@@ -16,3 +16,8 @@ $ npm run docker:dev
 
 Deploy & Production
 -------------------
+
+
+Others
+------
+http://www.freepik.com/free-photos-vectors/cargo
