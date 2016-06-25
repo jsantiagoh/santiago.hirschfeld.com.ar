@@ -1,22 +1,22 @@
-require('normalize.css/normalize.css');
-require('styles/App.css');
+import 'normalize.css/normalize.css'
+import 'styles/App.css'
 
-import React from 'react';
+import React from 'react'
+import NavigationBar from './NavigationBar'
+import SideBar from './SideBar'
+import Content from './Content'
 
-let logoImage = require('../images/logo.png');
-
-class AppComponent extends React.Component {
-  render() {
-    return (
-      <div className="index">
-        <img src={logoImage} alt="Horizon MCP" />
-        <div className="notice">Working</div>
-      </div>
-    );
-  }
-}
+const AppComponent = () => (
+  <div>
+    <NavigationBar title='Horizon MCP'/>
+    <div id="wrapper">
+      <SideBar />
+      <Content />
+    </div>
+  </div>
+)
 
 AppComponent.defaultProps = {
-};
+}
 
-export default AppComponent;
+export default AppComponent
