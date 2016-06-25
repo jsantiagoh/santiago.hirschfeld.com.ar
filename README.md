@@ -11,13 +11,25 @@ Development
 
 ### Run
 ```
-$ npm run docker:dev
+$ docker-compose up
+```
+
+#### Run Unit tests
+```
+$ docker-comopse run webapp npm test
+$ docker-comopse run webapp npm run test:watch
 ```
 
 Deploy & Production
 -------------------
 
+TODO
+----
+- Bootstrap from webpack and npm installation
+
+- Redux
+- Router
 
 Others
 ------
-http://www.freepik.com/free-photos-vectors/cargo
+- [Some nice icons](http://www.freepik.com/free-photos-vectors/cargo)
