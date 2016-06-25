@@ -1,6 +1,10 @@
 import 'normalize.css/normalize.css'
 import 'styles/App.css'
 
+import 'bootstrap'
+import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+
+
 import React from 'react'
 import NavigationBar from './NavigationBar'
 import SideBar from './SideBar'
