@@ -25,10 +25,12 @@ Deploy & Production
 
 TODO
 ----
-- Bootstrap from webpack and npm installation
-
-- Redux
-- Router
+[X] Bootstrap from webpack and npm installation.
+[X] Sass localized to components.
+[ ] dev.js, dist.js and test.js could use a better common config.
+[ ] Improve navbar and header
+[ ] Redux.
+[ ] Router and Redux router.
 
 Others
 ------

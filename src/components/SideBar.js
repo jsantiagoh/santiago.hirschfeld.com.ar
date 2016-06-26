@@ -3,9 +3,6 @@ import React from 'react'
 const SideBar = () => (
       <div id="sidebar-wrapper">
       <ul className="sidebar-nav">
-        <li className="sidebar-brand">
-          <a href="#">Horizon MCP</a>
-        </li>
         <li>
           <a href="#">Dashboard</a>
         </li>

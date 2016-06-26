@@ -1,9 +1,10 @@
-import 'normalize.css/normalize.css'
-import 'styles/App.css'
-
-import 'bootstrap'
+// Import this if using bootstrap js
+// import 'bootstrap'
 import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
+import 'normalize.css/normalize.css'
+import 'styles/App.sass'
+import './Main.sass'
 
 import React from 'react'
 import NavigationBar from './NavigationBar'
