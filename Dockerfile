@@ -8,5 +8,7 @@ RUN npm install
 
 COPY . /usr/src/app
 
+RUN npm run dist
+
 EXPOSE 3000
-CMD [ "npm", "run", "dist" ]
+CMD [ "npm", "start" ]

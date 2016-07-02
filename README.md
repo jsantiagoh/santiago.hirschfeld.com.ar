@@ -3,22 +3,16 @@ Horizon MCP: Web app
 
 Development
 -----------
-### Requirements:
+### Requirements
 - [Docker](https://www.docker.com)
 - [Docker Compose](https://www.docker.com/products/docker-compose)
+
+#### Optional
 - [Nodejs](https://nodejs.org)
-  - Only for issuing `npm run docker:dev`
+    - For local development without using docker
 
-### Run
-```
-$ docker-compose up
-```
-
-#### Run Unit tests
-```
-$ docker-comopse run webapp npm test
-$ docker-comopse run webapp npm run test:watch
-```
+### Run, test and production run
+See `Makefile`
 
 Deploy & Production
 -------------------

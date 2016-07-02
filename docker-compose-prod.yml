@@ -1,0 +1,14 @@
+version: "2"
+services:
+  webapp:
+    build: .
+    command: /bin/true
+    volumes:
+        - /usr/src/app/dist
+
+  nginx:
+    image: registry.gitlab.com/horizon-mcp/webapp-nginx
+    volumes_from:
+      - webapp
+    ports:
+        - 80:80
