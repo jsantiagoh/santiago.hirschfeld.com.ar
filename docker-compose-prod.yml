@@ -2,7 +2,7 @@ version: "2"
 services:
   webapp:
     build: .
-    command: /bin/true
+    command: npm run dist
     volumes:
         - /usr/src/app/dist
 
