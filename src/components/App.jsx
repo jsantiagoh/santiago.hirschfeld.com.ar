@@ -4,16 +4,17 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import 'normalize.css/normalize.css'
 import 'styles/App.sass'
-import './Main.sass'
+import './App.sass'
 
 import React from 'react'
-import NavigationBar from './NavigationBar'
-import SideBar from './SideBar'
+import TopBar from './layout/TopBar'
+import SideBar from './layout/SideBar'
 import Content from './Content'
+
 
 const AppComponent = () => (
   <div>
-    <NavigationBar title='Horizon MCP'/>
+    <TopBar title='Title of Titans'/>
     <div id="wrapper">
       <SideBar />
       <Content />
