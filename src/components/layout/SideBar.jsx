@@ -1,31 +1,30 @@
 import React from 'react'
 
-const SideBar = () => (
+class CoolSideBar extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      children : props.children.map( (c) => <li>{c}</li> )
+    }
+  }
+
+  render() {
+    return (
       <div id="sidebar-wrapper">
-      <ul className="sidebar-nav">
-        <li>
-          <a href="#">Dashboard</a>
-        </li>
-        <li>
-          <a href="#">Shortcuts</a>
-        </li>
-        <li>
-          <a href="#">Overview</a>
-        </li>
-        <li>
-          <a href="#">Events</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
+        <ul className="sidebar-nav">
+          {this.state.children}
+        </ul>
+      </div>
+    )
+  }
+}
+
+const SideBar = () => (
+  <CoolSideBar>
+      <a href="#">Home</a>
+      <a href="#">Tracking</a>
+  </CoolSideBar>
 )
 
 export default SideBar

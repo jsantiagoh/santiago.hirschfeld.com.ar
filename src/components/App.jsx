@@ -12,13 +12,19 @@ import SideBar from './layout/SideBar'
 import Content from './Content'
 
 
+const MainContent = (props) => (
+  <div id="wrapper">
+    {props.children}
+  </div>
+)
+
 const AppComponent = () => (
   <div>
-    <TopBar title='Title of Titans'/>
-    <div id="wrapper">
+    <TopBar title='Horizon'/>
+    <MainContent>
       <SideBar />
       <Content />
-    </div>
+    </MainContent>
   </div>
 )
 
