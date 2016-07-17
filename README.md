@@ -14,6 +14,13 @@ Development
 ### Run, test and production run
 See `Makefile`
 
+
+### Eslint
+For correctly using `eslint` on the current configuration install the following:
+- `npm i -g eslint`
+- `npm i -g eslint-plugin-react`
+- `npm i -g babel-eslint`
+
 Deploy & Production
 -------------------
 
