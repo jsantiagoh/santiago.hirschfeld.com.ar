@@ -1,5 +1,6 @@
 import React from 'react'
 
+import './Layout.sass'
 
 const TopBarHeader = (props) => (
   <div className="navbar-header">

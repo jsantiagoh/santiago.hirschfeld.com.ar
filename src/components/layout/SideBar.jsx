@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './Layout.sass'
+
 class CoolSideBar extends React.Component {
   constructor(props) {
     super(props)

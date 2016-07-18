@@ -4,11 +4,11 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import 'normalize.css/normalize.css'
 import 'styles/App.sass'
-import './App.sass'
 
 import React from 'react'
 import TopBar from './layout/TopBar'
 import SideBar from './layout/SideBar'
+import ContentWrapper from './layout/ContentWrapper'
 import Content from './Content'
 
 
@@ -23,12 +23,11 @@ const AppComponent = () => (
     <TopBar title='Horizon'/>
     <MainContent>
       <SideBar />
-      <Content />
+      <ContentWrapper>
+        <Content />
+      </ContentWrapper>
     </MainContent>
   </div>
 )
-
-AppComponent.defaultProps = {
-}
 
 export default AppComponent
