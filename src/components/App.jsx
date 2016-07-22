@@ -9,7 +9,7 @@ import React from 'react'
 import TopBar from './layout/TopBar'
 import SideBar from './layout/SideBar'
 import ContentWrapper from './layout/ContentWrapper'
-import Content from './Content'
+import Counter from './Counter'
 
 
 const MainContent = (props) => (
@@ -24,7 +24,7 @@ const AppComponent = () => (
     <MainContent>
       <SideBar />
       <ContentWrapper>
-        <Content />
+        <Counter />
       </ContentWrapper>
     </MainContent>
   </div>
