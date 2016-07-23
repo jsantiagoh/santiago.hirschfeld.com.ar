@@ -7,7 +7,7 @@ class CoolSideBar extends React.Component {
     super(props)
 
     this.state = {
-      children : props.children.map( (c) => <li>{c}</li> )
+      children : props.children.map( (c, i) => <li key={i}>{c}</li> )
     }
   }
 

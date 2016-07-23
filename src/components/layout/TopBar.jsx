@@ -15,7 +15,7 @@ const TopBarHeader = (props) => (
 )
 
 const TopRightNavigation = (props) => {
-  const children = props.children.map( (c) => <li>{c}</li> )
+  const children = props.children.map( (c,i) => <li key={i}>{c}</li> )
   return (
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1 ">
       <ul className="nav navbar-nav pull-right">
