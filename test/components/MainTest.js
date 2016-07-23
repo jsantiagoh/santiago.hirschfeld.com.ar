@@ -8,13 +8,13 @@
 // const TestUtils = React.addons.TestUtils;
 import createComponent from 'helpers/shallowRenderHelper'
 
-import Main from 'components/Main'
+import App from 'components/App'
 
 describe('MainComponent', () => {
   let MainComponent
 
   beforeEach(() => {
-    MainComponent = createComponent(Main)
+    MainComponent = createComponent(App)
   })
 
   it('should have a navigation and content in it.', () => {
