@@ -1,4 +1,4 @@
-Horizon MCP: Web app
+Horizon MCP: Bow
 ====================
 
 Development
@@ -14,7 +14,6 @@ Development
 ### Run, test and production run
 See `Makefile`
 
-
 ### Eslint
 For correctly using `eslint` on the current configuration install the following:
 - `npm i -g eslint`
@@ -23,15 +22,6 @@ For correctly using `eslint` on the current configuration install the following:
 
 Deploy & Production
 -------------------
-
-TODO
-----
-[X] Bootstrap from webpack and npm installation.
-[X] Sass localized to components.
-[ ] dev.js, dist.js and test.js could use a better common config.
-[ ] Improve navbar and header
-[ ] Redux.
-[ ] Router and Redux router.
 
 Others
 ------
