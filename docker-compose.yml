@@ -1,0 +1,10 @@
+version: "2"
+services:
+  webapp:
+    build: .
+    ports:
+      - 8000:8000
+    command: npm start
+    volumes:
+      - ./src:/usr/src/app/src:ro
+      - ./test:/usr/src/app/test:ro
