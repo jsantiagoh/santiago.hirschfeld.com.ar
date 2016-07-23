@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
+
 class Counter extends Component {
   constructor(props) {
     super(props)
@@ -49,4 +50,24 @@ Counter.propTypes = {
   onDecrement: PropTypes.func.isRequired
 }
 
-export default Counter
+// ------------------------------------ Container ------------------------------------------
+// TODO: This should be split into a dumb component and a container
+import { connect } from 'react-redux'
+import { increment, decrement } from '../actions'
+
+const mapStateToProps = (state) => {
+  return {
+    value: state
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onIncrement: () => { dispatch(increment()) },
+    onDecrement: () => { dispatch(decrement()) }
+  }
+}
+
+const CounterContainer = connect(mapStateToProps, mapDispatchToProps)(Counter)
+
+export default CounterContainer
