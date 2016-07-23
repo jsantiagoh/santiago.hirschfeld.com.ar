@@ -1,5 +1,6 @@
 Horizon MCP: Bow
 ====================
+[![build status](https://gitlab.com/horizon-mcp/bow/badges/develop/build.svg)](https://gitlab.com/horizon-mcp/bow/commits/develop)
 
 Development
 -----------
