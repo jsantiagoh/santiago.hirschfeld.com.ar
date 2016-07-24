@@ -1,18 +1,33 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducers from './reducers'
+import { createStore, combineReducers } from 'redux'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
+import { syncHistoryWithStore, routerReducer } from 'react-router-redux'
+import * as reducers from './reducers'
 
-import App from './components/App';
+import { App, Home, Counter } from './components/screens'
 
-let store = createStore(reducers)
+const reducer = combineReducers({
+  ...reducers,
+  routing: routerReducer
+})
 
-store.dispatch({type:'INCREMENT'})
+const store = createStore(
+  reducer
+)
+
+// Create an enhanced history that syncs navigation events with the store
+const history = syncHistoryWithStore(browserHistory, store)
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <Route path="/" component={App}>
+        <IndexRoute component={Home} />
+        <Route path="counter" component={Counter}/>
+      </Route>
+    </Router>
   </Provider>,
   document.getElementById('app')
 )

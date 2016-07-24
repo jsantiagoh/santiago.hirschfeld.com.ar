@@ -8,7 +8,7 @@
 // const TestUtils = React.addons.TestUtils;
 import createComponent from 'helpers/shallowRenderHelper'
 
-import App from 'components/App'
+import App from 'components/screens/App'
 
 describe('MainComponent', () => {
   let MainComponent

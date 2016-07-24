@@ -2,7 +2,7 @@ import React from 'react'
 
 import './Layout.sass'
 
-class CoolSideBar extends React.Component {
+class SideBarWrapper extends React.Component {
   constructor(props) {
     super(props)
 
@@ -22,11 +22,4 @@ class CoolSideBar extends React.Component {
   }
 }
 
-const SideBar = () => (
-  <CoolSideBar>
-      <a href="#">Home</a>
-      <a href="#">Tracking</a>
-  </CoolSideBar>
-)
-
-export default SideBar
+export default SideBarWrapper

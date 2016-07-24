@@ -1,15 +1,14 @@
 // Import this if using bootstrap js
 // import 'bootstrap'
-import '../../node_modules/bootstrap/dist/css/bootstrap.css'
+import '../../../../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import 'normalize.css/normalize.css'
 import 'styles/App.sass'
 
 import React from 'react'
-import TopBar from './layout/TopBar'
-import SideBar from './layout/SideBar'
-import ContentWrapper from './layout/ContentWrapper'
-import Counter from './Counter'
+import TopBar from 'components/layout/TopBar'
+import SideBar from 'components/shared/SideBar'
+import ContentWrapper from 'components/layout/ContentWrapper'
 
 
 const MainContent = (props) => (
@@ -18,13 +17,13 @@ const MainContent = (props) => (
   </div>
 )
 
-const AppComponent = () => (
+const AppComponent = ({children}) => (
   <div>
     <TopBar title='Horizon'/>
     <MainContent>
       <SideBar />
       <ContentWrapper>
-        <Counter />
+        {children}
       </ContentWrapper>
     </MainContent>
   </div>
