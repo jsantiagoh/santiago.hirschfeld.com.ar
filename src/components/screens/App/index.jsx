@@ -19,7 +19,7 @@ const MainContent = (props) => (
 
 const AppComponent = ({children}) => (
   <div>
-    <TopBar title='Horizon'/>
+    <TopBar title='Webapp'/>
     <MainContent>
       <SideBar />
       <ContentWrapper>

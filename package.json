@@ -2,7 +2,7 @@
   "name": "webapp",
   "private": true,
   "version": "0.0.1",
-  "description": "Horizon MCP: Web Application",
+  "description": "Sandbox web app",
   "main": "",
   "scripts": {
     "clean": "rimraf dist/*",
@@ -21,7 +21,7 @@
     "docker:build": "docker-compose build",
     "docker:dev": "docker-compose up"
   },
-  "repository": "git@gitlab.com:horizon-mcp/webapp.git",
+  "repository": "git@gitlab.com:jsantiagoh/sandbox-web.git",
   "author": "Santiago",
   "devDependencies": {
     "babel-core": "^6.0.0",

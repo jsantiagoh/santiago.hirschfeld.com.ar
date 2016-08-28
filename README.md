@@ -1,6 +1,5 @@
-Horizon MCP: Bow
+Sandbox Web
 ====================
-[![build status](https://gitlab.com/horizon-mcp/bow/badges/master/build.svg)](https://gitlab.com/horizon-mcp/bow/commits/master)
 
 
 Development
@@ -24,10 +23,6 @@ For correctly using `eslint` on the current configuration install the following:
 
 Deploy & Production
 -------------------
-
-Others
-------
-- [Some nice icons](http://www.freepik.com/free-photos-vectors/cargo)
 
 References
 ----------
