@@ -19,9 +19,13 @@
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
     "docker:build": "docker-compose build",
-    "docker:dev": "docker-compose up"
+    "docker:dev": "docker-compose up",
+    "deploy": "gh-pages-deploy-cmd 'dist/**/*'"
   },
-  "repository": "git@gitlab.com:jsantiagoh/sandbox-web.git",
+  "repository": {
+    "type": "git" ,
+    "url": "git@github.com:jsantiagoh/santiago.hirschfeld.com.ar.git"
+  },
   "author": "Santiago",
   "devDependencies": {
     "babel-core": "^6.0.0",
@@ -40,6 +44,7 @@
     "eslint-loader": "^1.0.0",
     "eslint-plugin-react": "^6.0.0",
     "file-loader": "^0.9.0",
+    "gh-pages-deploy-cmd": "^1.0.1",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
     "jquery": "^3.0.0",

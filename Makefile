@@ -1,13 +1,17 @@
-.PHONY: test
+.PHONY: deploy
 
-test:
-	docker-compose run webapp npm test
+deploy:
+  yarn run dist
+  yarn run deploy
 
-test-watch:
-	docker-compose run webapp run test:watch
+# test:
+# 	docker-compose run webapp npm test
 
-run:
-	docker-compose up
+# test-watch:
+# 	docker-compose run webapp run test:watch
 
-prod:
-	docker-compose -f docker-compose-prod.yml up --build
+# run:
+# 	docker-compose up
+
+# prod:
+# 	docker-compose -f docker-compose-prod.yml up --build
