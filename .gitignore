@@ -31,3 +31,5 @@ bower_components/
 
 # dist/assets/app.js.map
 dist/
+
+.publish/
