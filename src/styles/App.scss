@@ -1,0 +1,70 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+$background-color: #353535;
+$background-color2: #1c1c1c;
+$foreground-color: #fdf6cc;
+$highlight-color: #eead0e;
+$highlight-color2: #458588;
+
+
+body {
+    font-family: 'Inconsolata', monospace;
+    color: $foreground-color;
+    background-color: $background-color;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: $background-color2;
+    background-size: contain;
+    font-size: 1em;
+
+    .number {
+      margin-right: 3px;
+    }
+
+    .icon {
+      margin-right: 4px;
+    }
+
+    h1 {
+        display: inline-block;
+        padding: 0 20px;
+    }
+
+    a {
+        display: inline-block;
+        margin: 1px;
+        padding: 1px;
+        margin-left: 5px;
+        color: $foreground-color;
+        text-decoration: none;
+        &.active,
+        &:hover {
+            background-color: $highlight-color;
+        }
+    }
+
+}
+
+items {
+    margin: 1px;
+    margin-right: 5px;
+    padding: 1px;
+    float: right;
+}
+
+section {
+    padding: 20px;
+}
+
+.prompt {
+  color: $highlight-color2;
+}
+
+.separator {
+  color: $highlight-color;
+}

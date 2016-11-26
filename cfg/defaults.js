@@ -32,9 +32,11 @@ function getDefaultModules() {
       { test: /\.styl/, loader: 'style-loader!css-loader!stylus-loader' },
       { test: /\.(png|jpg|gif|woff|woff2)$/, loader: 'url-loader?limit=8192' },
       { test: /\.(mp4|ogg|svg)$/, loader: 'file-loader' },
-
-
-      // { test: /\.js[x]?$/, loaders: ['babel-loader?presets[]=es2015&presets[]=react'], exclude: /(node_modules|bower_components)/},
+      { test: /\.js[x]?$/,
+        loader: 'babel-loader',
+        exclude: /(node_modules|bower_components)/,
+        query: {presets: ['es2015']}
+      },
       // { test: /\.css$/, loaders: ['style', 'css'] },
       // { test: /\.scss$/, loaders: ['style', 'css', 'postcss', 'sass'] },
       // { test: /\.less$/, loaders: ['style', 'css', 'less'] },
