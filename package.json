@@ -7,7 +7,7 @@
   "scripts": {
     "clean": "rimraf dist/*",
     "copy": "copyfiles -f ./src/index.html ./src/favicon.ico ./dist",
-    "dist": "npm run copy & webpack --env=dist",
+    "dist": "npm run copy && echo 'santiago.hirschfeld.com.ar' > ./dist/CNAME &&webpack --env=dist",
     "lint": "eslint ./src",
     "posttest": "npm run lint",
     "release:major": "npm version major && npm publish && git push --follow-tags",
@@ -18,12 +18,10 @@
     "start": "node server.js --env=dev",
     "test": "karma start",
     "test:watch": "karma start --autoWatch=true --singleRun=false",
-    "docker:build": "docker-compose build",
-    "docker:dev": "docker-compose up",
-    "deploy": "gh-pages-deploy-cmd 'dist/**/*'"
+    "deploy": "git-directory-deploy --directory dist --branch gh-pages"
   },
   "repository": {
-    "type": "git" ,
+    "type": "git",
     "url": "git@github.com:jsantiagoh/santiago.hirschfeld.com.ar.git"
   },
   "author": "Santiago",
@@ -45,6 +43,7 @@
     "eslint-plugin-react": "^6.0.0",
     "file-loader": "^0.9.0",
     "gh-pages-deploy-cmd": "^1.0.1",
+    "git-directory-deploy": "^1.5.1",
     "glob": "^7.0.0",
     "isparta-instrumenter-loader": "^1.0.0",
     "jquery": "^3.0.0",
