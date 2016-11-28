@@ -1,8 +1,10 @@
 import React from 'react'
-import { Panel } from 'react-bootstrap'
+import Prompt from 'components/shared/Prompt'
 
 const Home = () => (
-  <Panel>This is the main page</Panel>
+  <div>
+    <Prompt path="santiago@internet ~" />
+  </div>
 )
 
 export default Home

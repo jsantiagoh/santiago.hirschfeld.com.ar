@@ -1,13 +1,8 @@
+@import 'colors';
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
-
-$background-color: #353535;
-$background-color2: #1c1c1c;
-$foreground-color: #fdf6cc;
-$highlight-color: #eead0e;
-$highlight-color2: #458588;
-
 
 body {
     font-family: 'Inconsolata', monospace;
@@ -59,12 +54,4 @@ items {
 
 section {
     padding: 20px;
-}
-
-.prompt {
-  color: $highlight-color2;
-}
-
-.separator {
-  color: $highlight-color;
 }
