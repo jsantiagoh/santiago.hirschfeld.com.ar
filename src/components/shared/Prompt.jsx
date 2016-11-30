@@ -1,19 +1,9 @@
 import React from 'react'
+import PromptPrefix from './PromptPrefix'
 
 import './Prompt.scss'
 
-const Prompt = ({ path }) => (
-  <div className="prompt">
-    <span className="path">{path}</span>
-    <span className="separator"> > </span>
-  </div>
-)
-
-const Cursor = () => (
-  <span className="cursor">_</span>
-)
-
-class PromptEntry extends React.Component {
+class Prompt extends React.Component {
   constructor(props) {
     super(props)
     this.focus = props.focus
@@ -23,32 +13,32 @@ class PromptEntry extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
+  componentDidMount() {
+    this.refs.input.focus();
+  }
+
   handleChange(event) {
     this.setState({ value: event.target.value })
   }
 
   handleSubmit(event) {
-    console.log('value submitted: ' + this.state.value)
     event.preventDefault()
+    // invoke the given call to handle a submission
+    this.setState({value: ''})
   }
 
   render() {
     return (
-      <div className="prompt-entry">
-        <form className="prompt" onSubmit={this.handleSubmit}>
-          <input type="text" value={this.state.value} onChange={this.handleChange} autoFocus={this.focus} />
-        </form>
-      </div>
+      <form className="prompt" onSubmit={this.handleSubmit}>
+        <PromptPrefix />
+        <input type="text"
+               ref="input"
+               value={this.state.value}
+               onChange={this.handleChange}
+               autoFocus={this.focus} />
+      </form>
     )
   }
 }
 
-const PromptLine = ({ path }) => (
-    <div className="prompt-line">
-      <Prompt path={path} />
-      <PromptEntry focus={true} />
-      <Cursor />
-    </div>
-)
-
-export default PromptLine
+export default Prompt

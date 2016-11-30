@@ -1,9 +1,9 @@
 import React from 'react'
-import Prompt from 'components/shared/Prompt'
+import Terminal from 'components/shared/Terminal'
 
 const Home = () => (
   <div>
-    <Prompt path="santiago@internet ~" />
+    <Terminal path="santiago@internet ~" />
   </div>
 )
 

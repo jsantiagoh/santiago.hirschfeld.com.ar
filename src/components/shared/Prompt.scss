@@ -1,40 +1,17 @@
 @import '../../styles/colors';
 
-div.prompt-line {
-  display: inline;
-}
+form.prompt {
+  display: flex;
 
-div.prompt {
-  display: inline;
+  input {
+    flex-grow: 1;
 
-  .path {
-    color: $highlight-color2;
-  }
-
-  .separator {
-    color: $highlight-color;
-  }
-}
-
-div.prompt-entry {
-  display: inline;
-
-  form.prompt {
-    display: inline;
-    input {
-      border: 1px dotted #999;
-      border-radius: 0;
-      -webkit-appearance: none;
-    }
-  }
-}
-
-
-span.cursor {
-  display: inline;
-  animation: blinker 1s linear infinite;
-
-  @keyframes blinker {
-    50% { opacity: 0; }
+    height: 1em;
+    // border: 1px dotted #999;
+    background: none;
+    border: none;
+    color: inherit;
+    outline: none;
+    font: inherit;
   }
 }
