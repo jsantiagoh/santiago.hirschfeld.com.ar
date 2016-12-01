@@ -4,7 +4,7 @@
       <prompt v-if="item.in" />
       {{ item.txt }}
     </div>
-    <prompt-input />
+    <prompt-input v-on:exec="onExecute" />
   </div>
 </template>
 
@@ -24,6 +24,11 @@ export default {
         { in: true, txt: 'echo hola' },
         { in: false, txt: 'hola' }
       ]
+    }
+  },
+  methods: {
+    onExecute (value) {
+      this.history.push({in: true, txt: value.cmd})
     }
   }
 }

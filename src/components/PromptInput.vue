@@ -22,7 +22,8 @@ export default {
   },
   methods: {
     onSubmit () {
-      console.log(this.cmd)
+      this.$emit('exec', { cmd: this.cmd })
+      this.cmd = ''
     }
   }
 }
@@ -37,7 +38,6 @@ input {
   flex-grow: 1;
 
   height: 1em;
-  // border: 1px dotted #999;
   background: none;
   border: none;
   color: inherit;
