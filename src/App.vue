@@ -5,7 +5,9 @@
   </div>
 </template>
 
-<style>
+<style lang="scss">
+@import "components/colors";
+
 #app {
   font-family: 'Share Tech Mono', monospace;
   -webkit-font-smoothing: antialiased;
@@ -13,7 +15,8 @@
 }
 
 body {
-    margin: 0px;
+  margin: 0px;
+  background-color: $color-bg;
 }
 </style>
 

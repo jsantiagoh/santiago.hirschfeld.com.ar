@@ -3,6 +3,6 @@ export default {
     terminal.clear()
   },
   help: function (cmd, params, terminal) {
-    terminal.output('This is in progress')
+    terminal.output('commands: ' + Object.keys(this))
   }
 }

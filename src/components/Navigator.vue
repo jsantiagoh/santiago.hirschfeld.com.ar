@@ -11,41 +11,41 @@
   </nav>
 </template>
 
-<style>
-nav {
-  padding: 3px;
-  margin-left: 0px;
-  font-size: 14px;
-  border-bottom: 1px solid;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
+<style lang="scss">
+  @import 'colors';
 
-li:hover {
-  background-color: orange;
-  box-sizing: border-box;
-}
+  nav {
+    padding: 3px;
+    margin-left: 0px;
+    font-size: 14px;
+    border-bottom: 1px solid;
+    color: $color-bg;
+    background-color: $color-fg;
+  }
 
-ol {
-  display: inline;
-  vertical-align: middle;
-  padding: 5px;
-}
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-li {
-  display: inline;
-}
+  li:hover {
+    box-sizing: border-box;
+  }
 
-.left {
-  display: inline;
-}
+  ol {
+    display: inline;
+    vertical-align: middle;
+    padding: 5px;
+  }
 
-.right {
-  float: right;
-}
+  li, .left {
+    display: inline;
+  }
+
+  .right {
+    float: right;
+  }
 </style>
 
 <script>

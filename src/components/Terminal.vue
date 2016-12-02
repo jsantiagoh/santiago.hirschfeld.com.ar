@@ -10,14 +10,18 @@
   </div>
 </template>
 
-<style>
-.prompt-line {
-  display: flex;
-}
+<style lang="scss">
+  @import 'colors';
 
-.terminal {
-  padding: 5px;
-}
+  .prompt-line {
+      display: flex;
+  }
+
+  .terminal {
+      padding: 5px;
+      background-color: $color-bg;
+      color: $color-fg;
+  }
 </style>
 
 <script>
