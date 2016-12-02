@@ -13,6 +13,7 @@
 <script>
   import PromptInput from './PromptInput.vue'
   import Prompt from './Prompt.vue'
+  import commands from './commands.js'
 
   export default {
     name: 'terminal',
@@ -42,19 +43,14 @@
         }
         let parts = command.split(' ')
         let cmd = parts[0]
-        switch (cmd) {
-          case 'clear':
-            this.clearHistory()
-            break
-          case 'help':
-            this.displayHelp()
-            break
+        let params = parts.slice(1, parts.length)
+        if (commands[cmd]) {
+          commands[cmd](cmd, params, this)
+        } else {
+          this.output(`${cmd}: unknown command, try 'help'`)
         }
       },
-      displayHelp () {
-        this.output('This is work in progress, stay tuned')
-      },
-      clearHistory () {
+      clear () {
         this.history = []
       }
     }

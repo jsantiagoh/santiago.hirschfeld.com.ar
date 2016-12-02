@@ -32,16 +32,16 @@ export default {
 </script>
 
 <style>
-/* form { */
-/*   display: flex; */
-/* } */
+form {
+  flex-grow: 1;
+}
+
 .prompt-input {
-    display: flex;
+  display: flex;
 }
 
 input {
-  flex-grow: 1;
-
+  width: 100%;
   height: 1em;
   background: none;
   border: none;
