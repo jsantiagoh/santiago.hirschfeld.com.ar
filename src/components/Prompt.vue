@@ -13,6 +13,5 @@
 <style>
   div.prompt {
     margin-right: 5px;
-    display: inline;
   }
 </style>

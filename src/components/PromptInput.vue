@@ -1,10 +1,12 @@
 <template>
-  <form v-on:submit.prevent="onSubmit">
-      <prompt />
-      <input type="text"
-             v-focus
-             v-model.trim="cmd" />
-  </form>
+  <div class="prompt-input">
+    <prompt />
+    <form v-on:submit.prevent="onSubmit">
+        <input type="text"
+               v-focus
+               v-model.trim="cmd" />
+    </form>
+  </div>
 </template>
 
 <script>
@@ -30,8 +32,11 @@ export default {
 </script>
 
 <style>
-form {
-  display: flex;
+/* form { */
+/*   display: flex; */
+/* } */
+.prompt-input {
+    display: flex;
 }
 
 input {
