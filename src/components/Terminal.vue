@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="terminal">
       <div v-for="item in history">
         <div class="prompt-line">
           <prompt v-if="item.in" />
@@ -9,6 +9,16 @@
     <prompt-input v-on:exec="onExecute" />
   </div>
 </template>
+
+<style>
+.prompt-line {
+  display: flex;
+}
+
+.terminal {
+  padding: 5px;
+}
+</style>
 
 <script>
   import PromptInput from './PromptInput.vue'
@@ -56,9 +66,3 @@
     }
 }
 </script>
-
-<style>
-  .prompt-line {
-    display: flex;
-  }
-</style>
