@@ -27,7 +27,6 @@
 <script>
   import PromptInput from './PromptInput.vue'
   import Prompt from './Prompt.vue'
-  import commands from './commands.js'
 
   export default {
     name: 'terminal',
@@ -35,6 +34,7 @@
       Prompt,
       PromptInput
     },
+    props: [ 'commands' ],
     data () {
       return {
         history: []
@@ -58,6 +58,8 @@
         let parts = command.split(' ')
         let cmd = parts[0]
         let params = parts.slice(1, parts.length)
+        let commands = this.commands
+
         if (commands[cmd]) {
           commands[cmd](cmd, params, this)
         } else {

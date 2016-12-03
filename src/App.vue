@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <navigator></navigator>
-    <terminal></terminal>
+    <terminal v-bind:commands="commands"></terminal>
   </div>
 </template>
 
@@ -24,11 +24,18 @@ body {
 import Navigator from './components/Navigator'
 import Terminal from './components/Terminal'
 
+import commandList from './commands'
+
 export default {
   name: 'app',
   components: {
     Navigator,
     Terminal
+  },
+  data () {
+    return {
+      'commands': commandList
+    }
   }
 }
 </script>
