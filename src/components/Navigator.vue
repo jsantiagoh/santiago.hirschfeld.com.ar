@@ -1,10 +1,10 @@
 <template>
   <nav id="navigator">
-    <ol class="left items">
+    <ul class="links">
       <li><a href="/"><icon name="terminal"></icon></i></a></li>
       <li><a href="https://github.com/jsantiagoh/"><icon name="github"></icon></a></li>
       <li><a href="https://linkedin.com/in/santiagohirschfeld"><icon name="linkedin"></icon></a></li>
-    </ol>
+    </ul>
     <div class="right">
       <clock />
     </div>
@@ -16,7 +16,7 @@
   @import 'colors';
 
   nav {
-    padding: 3px;
+    padding: 5px;
     margin-left: 0px;
     font-size: 14px;
     border-bottom: 1px solid;
@@ -24,23 +24,22 @@
     background-color: $color-fg;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
+  .links {
+    list-style: none;
+    overflow: hidden;   display: inline;
 
-  li:hover {
-    box-sizing: border-box;
-  }
+    li {
+      float: left;
 
-  ol {
-    display: inline;
-    vertical-align: middle;
-    padding: 5px;
-  }
-
-  li, .left {
-    display: inline;
+      a {
+        color: inherit;
+	      text-decoration: none;
+        padding: 0px 6px 0px 4px;
+	      position: relative;
+	      display: block;
+	      float: left;
+      }
+    }
   }
 
   .right {
