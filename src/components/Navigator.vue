@@ -1,9 +1,9 @@
 <template>
   <nav id="navigator">
     <ul class="links">
-      <li><a href="/"><icon name="terminal"></icon></i></a></li>
-      <li><a href="https://github.com/jsantiagoh/"><icon name="github"></icon></a></li>
-      <li><a href="https://linkedin.com/in/santiagohirschfeld"><icon name="linkedin"></icon></a></li>
+      <li><a href="/"><awesome-icon name="terminal"></awesome-icon></i></a></li>
+      <li><a href="https://github.com/jsantiagoh/"><awesome-icon name="github"></awesome-icon></a></li>
+      <li><a href="https://linkedin.com/in/santiagohirschfeld"><awesome-icon name="linkedin"></awesome-icon></a></li>
     </ul>
     <div class="right">
       <clock />
@@ -49,17 +49,13 @@
 
 <script>
   import Clock from './Clock.vue'
-  import Icon from 'vue-awesome/components/Icon.vue'
-
-  import 'vue-awesome/icons/terminal'
-  import 'vue-awesome/icons/github'
-  import 'vue-awesome/icons/linkedin'
+  import AwesomeIcon from './AwesomeIcon.vue'
 
   export default {
     name: 'navigator',
     components: {
-      Clock,
-      Icon
+      AwesomeIcon,
+      Clock
     }
   }
 </script>
