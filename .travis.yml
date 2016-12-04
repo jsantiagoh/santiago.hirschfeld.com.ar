@@ -6,6 +6,8 @@ script:
 - npm test
 - npm run build
 
+deploy: ./deploy.sh
+
 env:
   global:
     - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/jsantiagoh/santiago.hirschfeld.com.ar.git
