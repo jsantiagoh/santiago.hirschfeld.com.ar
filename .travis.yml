@@ -2,6 +2,8 @@ language: node_js
 node_js:
   - "6"
 
-deploy:
+script:
+  - npm test
   - npm run build
-  - ./deploy.sh
+
+deploy: ./deploy.sh
