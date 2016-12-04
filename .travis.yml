@@ -1,9 +1,13 @@
 language: node_js
 node_js:
-  - "6"
+- '6'
 
 script:
-  - npm test
-  - npm run build
+- npm test
+- npm run build
 
-deploy: ./deploy.sh
+env:
+  global:
+    - GIT_DEPLOY_REPO=https://$GITHUB_TOKEN@github.com/jsantiagoh/santiago.hirschfeld.com.ar.git
+
+    secure: jesekCQSupqEjrc76/rf6NOFy1QoRYvzJMAxKWvsbx2/KhyGQ8jMw0toOpQ8afsO35/tHXu/9mikecm7bxLTCcaFLVIRfSSME1gqBmME5ETrIgm0BtWSZ8r9O3iwu9r8k0t0h8+wo5UM7rNsdeD79ingykaNPoOabYtdE818O1nT5HhbpJ2b/eUrSl/+h1bEjeUP51zGoyM0RMfWszZRQ+MXDnUbyjrXERyV7O3djToro0lfjviGGJSG67pm4jH0ROSLDzJ2uruvrRJQXo/cmlpJDgu2JV8QxEyiPyf67f05F/QzTKgyQniwD/9HEO8DQX7xEiLgk1/H6YOusVmQMaU4TqBz3HfQfldo816xQ9d+cSg6tJwY/NhTaBME1dJpo1HRUKUxtgwrFQLZC4jBIgGdM9YbvgsGkxuSErr1bV5UyYz2jyLzCS+Td3YW/nbjvuMw4FBubG6lPCKg8gQmJUqmLAcCg3OIBFuj+aB/onjLZNrq7eHIPOiptbtmXZ87tKe/yrVSSgNJdLcaFjGOsOMklBT+f9PORbpDIaq7v9GUGYTveyml35hBqBcjMb1+C9l9Jnm8pQ/p5Ca2rt6w5wXHx/drOD//xXgz99TOrh/0TjY3D6J7x0mG4ka0EqGKA8st4FbKjHIs2WvdJEX8UXx2NFsHiwiNw2oA0ei+o9s=
