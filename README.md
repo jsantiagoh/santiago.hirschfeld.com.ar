@@ -1,24 +1,16 @@
-# santiago.hirschfeld.com.ar
+santiago.hirschfeld.com.ar
+==========================
 
-> Personal Project
+[![Build Status](https://travis-ci.org/jsantiagoh/santiago.hirschfeld.com.ar.svg?branch=master)](https://travis-ci.org/jsantiagoh/santiago.hirschfeld.com.ar)
 
-## Build Setup
+Code that powers [santiago.hirschfeld.com.ar](santiago.hirschfeld.com.ar)
 
-``` bash
-# install dependencies
-npm install
+Using
+-----
+### [Vue.js](http://vuejs.org/)
+Initial bootstrap wit [vue-cli](https://github.com/vuejs/vue-cli)
 
-# serve with hot reload at localhost:8080
-npm run dev
+### [Font Awesome](http://fontawesome.io/)
 
-# build for production with minification
-npm run build
-
-# run unit tests
-npm run unit
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### [Travis](https://travis-ci.org/) 
+For CI and deploys
