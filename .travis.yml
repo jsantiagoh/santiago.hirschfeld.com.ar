@@ -6,7 +6,7 @@ script:
 - npm test
 - npm run build
 
-deploy: ./deploy.sh
+after_success: ./deploy.sh
 
 env:
   global:
