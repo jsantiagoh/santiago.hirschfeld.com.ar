@@ -28,13 +28,7 @@ describe('AwesomeIcon', () => {
 
   it('has aria-hidden attribute', () => {
     expect(
-      newComponent(AwesomeIcon, { name: 'terminal' })$el.getAttribute('aria-hidden')
+      newComponent(AwesomeIcon, { name: 'terminal' }).$el.getAttribute('aria-hidden')
     ).to.equal('true')
-  })
-
-  it('must have a "name" prop', () => {
-    expect(
-      newComponent(AwesomeIcon, {}).$el.nodeName
-    ).to.equal('I')
   })
 })
