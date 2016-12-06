@@ -4,7 +4,7 @@ import AwesomeIcon from 'src/components/AwesomeIcon'
 function newComponent (component, propsData) {
   const Ctor = Vue.extend(component)
   const vm = new Ctor({ propsData }).$mount()
-  return vm.$el
+  return vm
 }
 
 describe('AwesomeIcon', () => {
@@ -16,19 +16,25 @@ describe('AwesomeIcon', () => {
 
   it('is an <i> element', () => {
     expect(
-      newComponent(AwesomeIcon, { name: 'terminal' }).nodeName
+      newComponent(AwesomeIcon, { name: 'terminal' }).$el.nodeName
     ).to.equal('I')
   })
 
   it('has a correct class', () => {
     expect(
-      newComponent(AwesomeIcon, { name: 'terminal' }).getAttribute('class')
+      newComponent(AwesomeIcon, { name: 'terminal' }).$el.getAttribute('class')
     ).to.equal('fa fa-terminal')
   })
 
   it('has aria-hidden attribute', () => {
     expect(
-      newComponent(AwesomeIcon, { name: 'terminal' }).getAttribute('aria-hidden')
+      newComponent(AwesomeIcon, { name: 'terminal' })$el.getAttribute('aria-hidden')
     ).to.equal('true')
+  })
+
+  it('must have a "name" prop', () => {
+    expect(
+      newComponent(AwesomeIcon, {}).$el.nodeName
+    ).to.equal('I')
   })
 })

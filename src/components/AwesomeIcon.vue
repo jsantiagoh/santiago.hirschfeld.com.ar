@@ -7,7 +7,12 @@ import 'font-awesome/css/font-awesome.min.css'
 
 export default {
   name: 'awesome-icon',
-  props: [ 'name' ],
+  props: {
+    name: {
+      type: String,
+      required: true
+    }
+  },
   data () {
     return {
       awesomeClasses: `fa fa-${this.name}`
