@@ -14,3 +14,11 @@ Initial bootstrap wit [vue-cli](https://github.com/vuejs/vue-cli)
 
 ### [Travis](https://travis-ci.org/) 
 For CI and deploys
+
+Configuration
+----
+[Encrypt](https://docs.travis-ci.com/user/encryption-keys/) GITHUB_TOKEN 
+
+`travis encrypt GITHUB_TOKEN="hjsdfhksjdhfksjdhfksdjfh"`
+
+
